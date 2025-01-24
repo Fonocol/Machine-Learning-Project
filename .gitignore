@@ -1,0 +1,9 @@
+# Ignorer tout le contenu du dossier data
+data/automobile
+data/ab_data.csv
+data/AdvertisingSales.csv
+data/creditcard.csv
+
+
+#run python
+notbooks/__pycache__
