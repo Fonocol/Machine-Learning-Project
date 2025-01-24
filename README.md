@@ -22,7 +22,7 @@ Chaque projet est conçu pour explorer une problématique concrète, de la colle
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/votre-utilisateur/nom-du-repo.git
+   git clone https://github.com/Fonocol/Machine-Learning-Project.git
    cd nom-du-repo
 
 ## Licence
