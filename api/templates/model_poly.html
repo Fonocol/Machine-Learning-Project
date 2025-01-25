@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modèle Polynomial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Modèle Polynomial</h1>
+        <p>Prédisez vos ventes en fonction des budgets publicitaires</p>
+    </header>
+    <main>
+        <form action="/model_poly" method="POST">
+            <label for="tv_budget">Budget TV ($):</label>
+            <input type="number" id="tv_budget" name="tv_budget" step="1" required>
+
+            <label for="radio_budget">Budget Radio ($):</label>
+            <input type="number" id="radio_budget" name="radio_budget" step="1" required>
+
+            <button type="submit">Prédire</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+        {% else %}
+        <div class="result">
+            Prédiction des ventes :
+        </div>
+
+        {% endif %}
+    </main>
+    <footer>
+        <p>© 2025 Prédictions IA</p>
+    </footer>
+</body>
+</html>

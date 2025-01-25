@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <h1>Prédictions IA</h1>
+        <p>Choisissez un modèle pour commencer</p>
+    </header>
+    <main class="container">
+        <div class="model-card">
+            <img src="/static/images/model1.png" alt="Modèle Polynomial">
+            <h2>Modèle Polynomial</h2>
+            <p>Prédisez vos ventes en fonction des budgets publicitaires.</p>
+            <a href="/model_poly" class="btn">Utiliser ce modèle</a>
+        </div>
+
+        <div class="model-card">
+            <img src="/static/images/model2.png" alt="Clustering">
+            <h2>Modèle Clustering</h2>
+            <p>Prédisez les groupe de vos client.</p>
+            <a href="/predict-segmentation" class="btn">Utiliser ce modèle</a>
+        </div>
+
+        
+        
+    </main>
+    <footer>
+        <p>© 2025 Prédictions IA</p>
+    </footer>
+</body>
+</html>

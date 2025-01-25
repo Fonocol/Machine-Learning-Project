@@ -1,0 +1,164 @@
+/* Réinitialisation des marges et des paddings pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Définir la police de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 0;
+}
+
+/* Style pour le header */
+header {
+    background-color: #2E3A59;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Style du container principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Style des cartes des modèles */
+.model-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.model-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Titre et description des modèles */
+.model-card h2 {
+    font-size: 1.8rem;
+    color: #2E3A59;
+    margin-bottom: 15px;
+}
+
+.model-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Bouton d'action */
+.model-card .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.model-card .btn:hover {
+    background-color: #45a049;
+}
+
+/* Section footer */
+footer {
+    background-color: #2E3A59;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* Formulaire dans la page modèle */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Section des résultats de prédiction */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eef7ee;
+    font-size: 1.2rem;
+    text-align: center;  /* Centre le texte */
+    border-radius: 8px;  /* Coins arrondis pour un look plus moderne */
+    width: 100%;
+    max-width: 600px;  /* Limite la largeur pour ne pas s'étirer trop sur les écrans larges */
+    margin-left: auto;  /* Centrer horizontalement */
+    margin-right: auto; /* Centrer horizontalement */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile pour le relief */
+}

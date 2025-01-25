@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction - Segmentation Client</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Segmentation Client</h1>
+        <p>Remplissez les informations ci-dessous pour prédire le segment d'un client.</p>
+    </header>
+
+    <div class="container">
+        <form action="/predict-segmentation" method="post">
+            <!-- Genre -->
+            <label for="gender">Genre :</label>
+            <select id="gender" name="gender" required>
+                <option value="1">Homme</option>
+                <option value="0">Femme</option>
+            </select>
+
+            <!-- Marié -->
+            <label for="ever_married">État matrimonial :</label>
+            <select id="ever_married" name="ever_married" required>
+                <option value="1">Oui</option>
+                <option value="0">Non</option>
+            </select>
+
+            <!-- Âge -->
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" min="0" max="100" required>
+
+            <!-- Diplômé -->
+            <label for="graduated">Diplômé :</label>
+            <select id="graduated" name="graduated" required>
+                <option value="1">Oui</option>
+                <option value="0">Non</option>
+            </select>
+
+            <!-- Profession --> 
+            <label for="profession">Profession :</label>
+            <select id="profession" name="profession" required>
+                <option value="0">Healthcare</option>
+                <option value="1">Engineer</option>
+                <option value="2">Lawyer</option>
+                <option value="3">Entertainment</option>
+                <option value="4">Artist</option>
+                <option value="5">Executive</option>
+                <option value="6">Doctor</option>
+                <option value="7">Homemaker</option>
+                <option value="8">Marketing</option>
+            </select>
+
+            <!-- Expérience professionnelle -->
+            <label for="work_experience">Expérience professionnelle (années) :</label>
+            <input type="number" id="work_experience" name="work_experience" min="0" step="1" required>
+
+            <!-- Score de dépense -->
+            <label for="spending_score">Score de dépense :</label>
+            <select id="spending_score" name="spending_score" required>
+                <option value="0">Bas</option>
+                <option value="1">Moyen</option>
+                <option value="2">Élevé</option>
+            </select>
+
+            <!-- Taille de la famille -->
+            <label for="family_size">Taille de la famille :</label>
+            <input type="number" id="family_size" name="family_size" min="1" max="10" required>
+
+            <!-- Var_1 -->
+            <label for="var_1">Variable 1 :</label>
+            <input type="number" id="var_1" name="var_1" min="1"  required>
+
+            <!-- Bouton de soumission -->
+            <button type="submit">Prédire le segment</button>
+        </form>
+
+        
+    </div>
+
+    {% if segmentation %}
+        <div class="result">
+            {{ segmentation }}
+        </div>
+    {% else %}
+    <div class="result">
+        Prédiction Du Groupe :
+    </div>
+
+        {% endif %}
+
+    <footer>
+        <p>&copy; 2025 - Segmentation Client | Modèle de prédiction</p>
+    </footer>
+</body>
+</html>
